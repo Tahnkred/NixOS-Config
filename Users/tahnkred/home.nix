@@ -8,12 +8,12 @@
   # Paquets installés dans le profil utilisateur
     imports = [
       ../../Modules/Applications/tahnkred
-      ../../Modules/Environments/Plasma/Plasma.nix
+    #  ../../Modules/Environments/Plasma/Plasma.nix
     ];
 
-    modules = [
-      ../../Modules/Environments/Plasma/Plasma.nix
-    ];
+  #  modules = [
+  #    ../../Modules/Environments/Plasma/Plasma.nix
+  #  ];
 
 
   # Laisse Home Manager se gérer lui-même

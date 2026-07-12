@@ -2,13 +2,13 @@
 {
     programs.git = {
         enable = true;
-       # userName = "Ton Nom";
-       # userEmail = "ton.email@example.com";
+        userName = "Tahnkred";
+        userEmail = "70665792+Tahnkred@users.noreply.github.com";
 
-    settings = {
-        init.defaultBranch = "main";
-        pull.rebase = false;
-        core.editor = "vim";
-    };
+  #  settings = {
+  #      init.defaultBranch = "main";
+  #      pull.rebase = false;
+  #      core.editor = "vim";
+  #  };
     };
 }
