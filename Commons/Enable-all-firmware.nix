@@ -1,0 +1,4 @@
+{config, ...}:
+{
+    hardware.enableAllFirmware = true;
+}
