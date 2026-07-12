@@ -62,7 +62,7 @@
 	          ./Machines
 	          allowUnfree
 	          home-manager.nixosModules.home-manager
-	        #  inputs.plasma-manager.homeModules.plasma-manager
+	          inputs.plasma-manager.homeModules.plasma-manager
               {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;

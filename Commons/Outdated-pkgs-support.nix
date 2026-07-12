@@ -1,4 +1,4 @@
-{nixpkgs, conf, ...}:
+{config, ...}:
 {
   # Permission de paquets non sécurisés (actuellement Vesktop)
   nixpkgs.config.permittedInsecurePackages = [
