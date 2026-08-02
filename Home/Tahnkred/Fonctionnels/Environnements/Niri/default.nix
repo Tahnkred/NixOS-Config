@@ -1,8 +1,9 @@
+{inputs, pkgs, ...}:
 {
  # programs.niri.enable = true;
   
  # home-manager.users.username = {
-    programs.niri.settings = {
+    inputs.programs.niri.settings = {
     #  input.keyboard.xkb.layout = "fr, mac";
         prefer-no-csd = true;
 
