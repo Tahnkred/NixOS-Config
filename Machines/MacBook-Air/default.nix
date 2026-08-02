@@ -2,12 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, nixos-hardware, ... }:
+{ config, inputs, ... }:
 
 {
 
   imports = [
-    inputs.nixos-hardware.nixosModules.apple-macbook-air-7
+  #  inputs.nixos-hardware.nixosModules.apple-macbook-air-7
     ./hardware-configuration.nix
 
     ../Communs/Globaux
