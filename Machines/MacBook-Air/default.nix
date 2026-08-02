@@ -14,9 +14,9 @@
     ../Communs/Noyaux/Linux-zen.nix
     ../Communs/Utilisateurs/tahnkred
 
-    ../Optionnels/Enable-touchpad-support.nix
-    ../Optionnels/Printing-service.nix
-    ../Optionnels/Zramswap.nix
+    ../Communs/Optionnels/Enable-touchpad-support.nix
+    ../Communs/Optionnels/Printing-service.nix
+    ../Communs/Optionnels/Zramswap.nix
   ];
 
   networking.hostName = "macbook";
