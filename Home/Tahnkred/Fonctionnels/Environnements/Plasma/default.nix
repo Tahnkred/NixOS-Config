@@ -1,7 +1,8 @@
 { pkgs, ... }:
 
 {
-  imports = [ <plasma-manager/modules> ];
+
+  imports = [ inputs.plasma-manager.homeModules.plasma-manager ];
 
   programs.plasma = {
     enable = true;

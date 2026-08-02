@@ -1,4 +1,0 @@
-{config, ...}:
-{
-    hardware.enableAllFirmware = true;
-}

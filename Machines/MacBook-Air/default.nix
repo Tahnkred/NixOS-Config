@@ -1,0 +1,37 @@
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
+# and in the NixOS manual (accessible by running ‘nixos-help’).
+
+{ config, nixos-hardware, ... }:
+
+{
+
+  imports = [
+    nixos-hardware.nixosModules.apple-macbook-air-7
+    ./hardware-configuration.nix
+
+    ../Communs/Globaux
+    ../Communs/Noyaux/Linux-zen.nix
+    ../Communs/Utilisateurs/tahnkred
+
+    ../Optionnels/Enable-touchpad-support.nix
+    ../Optionnels/Printing-service.nix
+    ../Optionnels/Zramswap.nix
+  ];
+
+  networking.hostName = "macbook";
+  useDHCP = true;
+
+  # Driver Broadcom pour le WiFi (pas supporté à ce jour)
+  # boot.kernelModules = [ "b43" ];
+  # networking.enableB43Firmware = true;
+
+  # Configure keymap in X11 (je ne sais pas pourquoi mais c'est la seule façon de faire fonctionner le clavier correctement)
+  services.xserver.xkb = {
+  layout = "fr";
+  variant = "mac";
+  };
+
+system.stateVersion = "26.05";
+
+}
