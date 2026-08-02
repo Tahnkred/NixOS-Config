@@ -1,4 +1,5 @@
 {pkgs, ...}:
 {
-services.displayManager.sddm.wayland.enable = true;
+    services.xserver.enable = true;
+    services.displayManager.sddm.wayland.enable = true;
 }

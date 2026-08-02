@@ -2,8 +2,10 @@
 {
     programs.git = {
         enable = true;
-        userName = "Tahnkred";
-        userEmail = "70665792+Tahnkred@users.noreply.github.com";
+        settings.user = {
+            name = "Tahnkred";
+            email = "70665792+Tahnkred@users.noreply.github.com";
+        };
 
   #  settings = {
   #      init.defaultBranch = "main";

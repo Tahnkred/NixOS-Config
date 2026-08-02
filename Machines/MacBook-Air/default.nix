@@ -11,7 +11,7 @@
     ./hardware-configuration.nix
 
     ../Communs/Globaux
-    ../Communs/Noyaux/Linux-zen.nix
+    ../Communs/Noyaux/Linux-latest.nix
     ../Communs/Utilisateurs/tahnkred
 
     ../Communs/Optionnels/Enable-touchpad-support.nix
