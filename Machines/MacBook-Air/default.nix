@@ -7,7 +7,7 @@
 {
 
   imports = [
-    nixos-hardware.nixosModules.apple-macbook-air-7
+    inputs.nixos-hardware.nixosModules.apple-macbook-air-7
     ./hardware-configuration.nix
 
     ../Communs/Globaux
