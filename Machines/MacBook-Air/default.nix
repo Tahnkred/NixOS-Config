@@ -19,8 +19,10 @@
     ../Communs/Optionnels/Zramswap.nix
   ];
 
-  networking.hostName = "macbook";
-  useDHCP = true;
+  networking = {
+    hostName = "macbook";
+    useDHCP = true;
+  };
 
   # Driver Broadcom pour le WiFi (pas supporté à ce jour)
   # boot.kernelModules = [ "b43" ];
