@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ lib, config, outputs, ... }:
 {
   imports =
     [
-    ./Fonctionnels/Gestionnaires/sddm.nix
+    #
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);
 

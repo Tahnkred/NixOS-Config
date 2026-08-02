@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-    services.desktopManager.plasma6.enable = true;
+    home-manager.users.tahnkred.services.desktopManager.plasma6.enable = true;
     #services.displayManager.sddm.enable = true;
 
   #  environment.plasma6.excludePackages = with pkgs.kdePackages; [

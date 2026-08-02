@@ -17,6 +17,8 @@
     ../Communs/Optionnels/Enable-touchpad-support.nix
     ../Communs/Optionnels/Printing-service.nix
     ../Communs/Optionnels/Zramswap.nix
+    
+    ../Communs/Optionnels/Gestionnaires/sddm.nix
   ];
 
   networking = {

@@ -1,12 +1,12 @@
 {pkgs, ...}: {
   imports = [
-    ./Global
+    ../Global
 
     ../Fonctionnels/Applications/Bureautique
     ../Fonctionnels/Applications/Developpement
     ../Fonctionnels/Applications/Messageries/Vesktop.nix
 
-    ../Fonctionnels/Environnements/Plasma/6
+    ../Fonctionnels/Environnements/Plasma
   ];
 
   #  ------   -----   ------
