@@ -1,7 +1,7 @@
 {
-  programs.niri.enable = true;
+ # programs.niri.enable = true;
   
-  home-manager.users.username = {
+ # home-manager.users.username = {
     programs.niri.settings = {
     #  input.keyboard.xkb.layout = "fr, mac";
         prefer-no-csd = true;
@@ -21,5 +21,5 @@
         # Enable Wayland native mode for Electron apps
         environment.NIXOS_OZONE_WL = "1";
     };
-  };
+# };
 }

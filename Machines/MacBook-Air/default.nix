@@ -19,6 +19,7 @@
     ../Communs/Optionnels/Zramswap.nix
     
     ../Communs/Optionnels/Gestionnaires/sddm.nix
+    ../Communs/Optionnels/Compositeurs/Niri.nix
   ];
 
   networking = {

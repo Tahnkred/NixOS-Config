@@ -7,7 +7,7 @@
     ../Fonctionnels/Applications/Messageries/Vesktop.nix
 
     ../Fonctionnels/Environnements/Niri
-    ../Shell/Noctalia
+    ../Fonctionnels/Shell/Noctalia
   ];
 
   #  ------   -----   ------
