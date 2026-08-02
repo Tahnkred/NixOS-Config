@@ -47,6 +47,7 @@
   # Merci Misterio77 pour avoir publié ta configuration Nix psk ça douille par ici...
   outputs = { self, nixpkgs, systems, nixos-hardware, home-manager, plasma-manager, ... } @ inputs:
     let
+      inherit (self) outputs;
       lib = let
         base = nixpkgs.lib // home-manager.lib;
         in base // {
