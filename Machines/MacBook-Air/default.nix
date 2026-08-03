@@ -18,7 +18,7 @@
     ../Communs/Optionnels/Printing-service.nix
     ../Communs/Optionnels/Zramswap.nix
     
-    ../Communs/Optionnels/Gestionnaires/regreet.nix
+  #  ../Communs/Optionnels/Gestionnaires/regreet.nix
     ../Communs/Optionnels/Compositeurs/Niri.nix
   ];
 
