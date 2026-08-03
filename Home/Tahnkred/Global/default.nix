@@ -2,7 +2,7 @@
 {
   imports =
     [
-    #
+    ./Nix.nix
     ]
     ++ (builtins.attrValues outputs.homeManagerModules);
 
