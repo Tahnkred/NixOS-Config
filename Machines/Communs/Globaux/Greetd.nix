@@ -13,9 +13,5 @@
         default_session.command = lib.mkOverride 1499 "/run/current-system/sw/bin/niri";
       };
     };
-    displayManager = {
-      enable = true;
-      sessionPackages = lib.flatten (lib.mapAttrsToList (_: v: v.home.exportedSessionPackages) config.home-manager.users);
-    };
   };
 }
