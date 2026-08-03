@@ -6,13 +6,12 @@
 
   services = {
     seatd.enable = true;
+    seatd.keyMap = "fr";
     greetd = {
       enable = true;
       settings = {
         greeter = "${pkgs.regreet}/bin/regreet";
-        default_session.command = lib.mkOverride 1499 "${pkgs.dbus}/bin/dbus-run-session \
-        env XDG_CURRENT_DESKTOP=niri \
-        /run/current-system/sw/bin/niri";
+        default_session.command = lib.mkOverride 1499 "${pkgs.dbus}/bin/dbus-run-session -- /run/current-system/sw/bin/niri";
       };
     };
   };
