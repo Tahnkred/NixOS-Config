@@ -13,9 +13,5 @@
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = lib.mkDefault "26.05";
   };
-  # Paquets installés dans le profil utilisateur
-  #  imports = [
-  #    ../../Modules/Applications/tahnkred
-  #    ../../Modules/Environments/Plasma/Plasma.nix
-  #  ];
+
 }

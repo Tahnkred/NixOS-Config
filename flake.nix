@@ -24,6 +24,7 @@
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
 
     zen-browser = {
@@ -38,11 +39,11 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
+  #  niri = {
+  #    url = "github:sodiboo/niri-flake";
+  #    inputs.nixpkgs.follows = "nixpkgs";
+  #    inputs.home-manager.follows = "home-manager";
+  #  };
 
     noctalia = {
       url = "github:noctalia-dev/noctalia";
@@ -99,62 +100,4 @@
     homeConfigurations = {};
   };
 
-  #      system = "x86_64-linux";
-  #      pkgs = nixpkgs.legacyPackages.${system};
-  #      allowUnfree = { nixpkgs.config.allowUnfree = true; };
-
-  #      modulesBase = [
-  #        ./Commons
-  #        ./Users
-  #        ./Modules/Environments
-  #      ];
-
-  #    mkMachine = { hostname, users }:
-  #      nixpkgs.lib.nixosSystem {
-	#     inherit system;
-	#     specialArgs = {inherit inputs system hostname nixos-hardware;};
-
-	#     modules = modulesBase ++ [
-	#          ./Machines
-	#          allowUnfree
-	#          home-manager.nixosModules.home-manager
-	#          inputs.plasma-manager.homeModules.plasma-manager
-  #            {
-  #            home-manager.useGlobalPkgs = true;
-  #            home-manager.useUserPackages = true;
-  #            home-manager.extraSpecialArgs = { inherit inputs system hostname; };
-
-  #            home-manager.sharedModules =
-  #              nixpkgs.lib.optional
-  #                (builtins.pathExists ./Machines/${hostname}/Home/Commun.nix)
-  #                ./Machines/${hostname}/Home/Commun.nix;
-
-  #            home-manager.users = nixpkgs.lib.genAttrs users (name:
-  #              { lib, ...}:
-  #              {
-  #                imports = [ ./Users/${name}/home.nix ]
-  #                  ++ lib.optional
-  #                    (builtins.pathExists ./Machines/${hostname}/Home/${name}.nix)
-  #                    ./Machines/${hostname}/Home/${name}.nix
-  #              ;}
-  #            );
-  #            }
-  #        ];
-  #       };
-
-  #    in
-  #    {
-  #    nixosConfigurations = {
-
-  #      macbook = mkMachine {
-  #        hostname = "macbook";
-  #        users = [ "tahnkred" ];
-  #      };
-
-   #     bureau = mkMachine {
-   #       hostname = "bureau";
-   #       users = [ "tahnkred" ];
-   #     };
-  #    };
-  #  };
 }

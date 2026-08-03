@@ -1,33 +1,11 @@
 # Graphical greeter, hooks into greetd
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.regreet = {
     enable = true;
-  #  cageArgs = ["-d" "-s" "-m" "last"];
-  #  iconTheme = {
-  #    name = "Papirus-Dark";
-  #    package = pkgs.papirus-icon-theme;
-  #  };
-  #  theme = {
-  #    name = "Materia-dark";
-  #    package = pkgs.materia-theme;
-  #  };
-  #  font = {
-  #    name = "Fira Sans";
-  #    package = pkgs.fira;
-  #    size = 12;
-  #  };
-  #  cursorTheme = {
-  #    package = pkgs.apple-cursor;
-  #    name = "macOS";
-  #  };
+    package = pkgs.regreet;
+    theme.name = "Adwaita";
+    font.name = "Cantarell";
+    font.size = 14;
   };
-
-#  environment.persistence = {
-    # Persist last user and last selected session
-#    "/persist".directories = [{
-#      directory = "/var/lib/regreet";
-#      user = "greeter";
-#      group = "greeter";
-#    }];
-#  };
 }
