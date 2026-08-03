@@ -1,10 +1,11 @@
 { pkgs, inputs, ... }:
 {
-  imports = [
-      inputs.zen-browser.homeModules.default
-  ];
-
-  programs.zen-browser = {
+#  imports = [
+#      inputs.zen-browser.homeModules.default
+#  ];
+    home.packages = [pkgs.inputs.zen-browser.default];
+    
+    programs.zen-browser = {
       enable = true;
       setAsDefaultBrowser = true;
 
