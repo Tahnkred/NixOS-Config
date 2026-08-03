@@ -11,7 +11,15 @@
     services.polkit-gnome.enable = true; # polkit
 
     home.packages = with pkgs; [
-        swaybg # wallpaper
+        waybar
+        fuzzel
+        mako
+        swaybg
+        swaylock
+        swayidle
+        wl-clipboard
+        pcmanfm
+        polkit_gnome
         xwayland-satellite # xwayland support
     ];
 
