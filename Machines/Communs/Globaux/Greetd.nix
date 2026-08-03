@@ -4,9 +4,7 @@
     enable = true;
     settings = {
       default_session.command = ''
-        ${pkgs.greetd.tuigreet}/bin/tuigreet \
-          --time \
-          --cmd /run/current-system/sw/bin/niri
+        ${pkgs.regreet}/bin/regreet --cmd /run/current-system/sw/bin/niri
       '';
     };
   };
