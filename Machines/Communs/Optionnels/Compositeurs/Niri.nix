@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, ... }:
 
 {
 #   programs.niri.enable = true;
@@ -31,9 +31,9 @@ services.greetd = {
  };
 };
 
-NixOS otherwise injects a stripped PATH via Environment= on the niri.service
-unit which shadows the imported user-manager PATH. Disabling the default
-lets niri inherit the full PATH set up by niri-session.
+# NixOS otherwise injects a stripped PATH via Environment= on the niri.service
+# unit which shadows the imported user-manager PATH. Disabling the default
+# lets niri inherit the full PATH set up by niri-session.
 systemd.user.services.niri.enableDefaultPath = false;
 
 }

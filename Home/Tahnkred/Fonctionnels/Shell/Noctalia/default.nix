@@ -7,6 +7,9 @@
   home.packages = [pkgs.inputs.noctalia.default];
 
   programs.noctalia = {
-    enable = true;
+  #  enable = true;
+    settings = {
+
+    };
   };
 }
