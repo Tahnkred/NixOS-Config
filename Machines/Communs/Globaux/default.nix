@@ -6,7 +6,7 @@
     ./Bootloader.nix
     ./Console-keymap.nix
     ./Firewall.nix
-    ./Greetd.nix
+  #  ./Greetd.nix
     ./Locale.nix
     ./NetworkManager.nix
     ./Nix.nix
