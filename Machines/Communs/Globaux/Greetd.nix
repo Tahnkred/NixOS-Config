@@ -1,13 +1,21 @@
 { config, lib, pkgs, ... }:
 {
-  services.greetd = {
-    enable = true;
-    settings = {
-      greeter = "${pkgs.regreet}/bin/regreet";
-      initial_session = {
-        user = "tahnkred";
-        command = "${pkgs.dbus}/bin/dbus-run-session /run/current-system/sw/bin/niri";
+  users.users.greeter = {
+    extraGroups = [ "seat" ];
+  };
+
+  services = {
+    seatd.enable = true;
+    greetd = {
+      enable = true;
+      settings = {
+        greeter = "${pkgs.regreet}/bin/regreet";
+        default_session.command = lib.mkOverride 1499 "/run/current-system/sw/bin/niri";
       };
+    };
+    displayManager = {
+      enable = true;
+      sessionPackages = lib.flatten (lib.mapAttrsToList (_: v: v.home.exportedSessionPackages) config.home-manager.users);
     };
   };
 }
