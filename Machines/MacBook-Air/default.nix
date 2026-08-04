@@ -22,7 +22,7 @@
   
     ../Communs/Optionnels/Gestionnaires/Ly.nix
     ../Communs/Optionnels/Compositeurs/Niri.nix
-    ../Communs/Optionnels/Shell/Noctalia.nix
+    ../Communs/Optionnels/Shell/Noctalia
   ];
 
   networking = {
