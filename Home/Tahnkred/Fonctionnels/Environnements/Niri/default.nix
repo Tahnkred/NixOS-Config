@@ -24,6 +24,8 @@
         pcmanfm
         polkit_gnome
         xwayland-satellite # xwayland support
+        gcr # requis par org.gnome.keyring.SystemPrompter, requis par gnome-keyring
+        libsecret # Provides secret-tool, utile pour debug le secret service    
     ];
 
     home.sessionVariables = {
