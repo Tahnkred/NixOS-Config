@@ -39,6 +39,7 @@
   layout = "fr";
   variant = "mac";
   };
+  boot.kernelParams = [ "hid_apple.fnmode=2" ];
 
 system.stateVersion = "26.05";
 
