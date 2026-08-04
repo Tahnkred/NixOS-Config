@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ./Firefox.nix
+        # ./Firefox.nix
         ./Zen-browser.nix
     ];
 }

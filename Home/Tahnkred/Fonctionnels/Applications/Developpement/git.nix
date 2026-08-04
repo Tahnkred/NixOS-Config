@@ -6,11 +6,5 @@
             name = "Tahnkred";
             email = "70665792+Tahnkred@users.noreply.github.com";
         };
-
-  #  settings = {
-  #      init.defaultBranch = "main";
-  #      pull.rebase = false;
-  #      core.editor = "vim";
-  #  };
     };
 }
