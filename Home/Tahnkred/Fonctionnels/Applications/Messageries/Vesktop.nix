@@ -1,5 +1,10 @@
 { pkgs, config, ...}:
 
 {
-  home.packages = with pkgs; [vesktop];
+  programs.vesktop = {
+    enable = true;
+    settings = {
+      customTitleBar = false;
+    };
+  };
 }
