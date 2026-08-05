@@ -1,10 +1,10 @@
 { pkgs, config, inputs, ... }:
-let
-  firefox-addons = inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system};
+# let
+#   firefox-addons = inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system};
 
-  # Onglets épinglés (voir examples/10-pinned-tabs.nix du flake).
-  # Chaque pin a besoin d'un id (UUID stable que tu inventes) pour être
-  # reconnu à chaque rebuild sans être recréé/dupliqué.
+#   # Onglets épinglés (voir examples/10-pinned-tabs.nix du flake).
+#   # Chaque pin a besoin d'un id (UUID stable que tu inventes) pour être
+#   # reconnu à chaque rebuild sans être recréé/dupliqué.
   pins = {
     "YouTube" = {
       id = "b4a82b48-8254-4e98-b376-c55ed78fe1ea";
@@ -61,7 +61,7 @@ let
       isEssential = true;
     };
   };
-in
+# in
 {
   imports = [
     inputs.zen-browser.homeModules.default

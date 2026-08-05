@@ -3,6 +3,6 @@
 {
     imports = [
         # ./Firefox.nix
-        ./Zen-browser.nix
+        ./Zen
     ];
 }
