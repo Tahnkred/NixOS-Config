@@ -20,7 +20,7 @@
 ####################################################################
 
     programs.niri = {
-        enable = false;
+        enable = true;
     };
 # services.greetd = {
 #  enable = true;
