@@ -1,4 +1,4 @@
-{ pkgs, config, osConfig, ... }:
+{ pkgs, config, ... }:
 {
     # xdg.configFile."niri/config.kdl".source =
     #   config.lib.file.mkOutOfStoreSymlink

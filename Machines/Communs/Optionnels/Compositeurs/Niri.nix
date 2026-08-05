@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, osConfig,... }:
 
 {
 #   programs.niri.enable = true;
