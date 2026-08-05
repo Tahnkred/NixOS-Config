@@ -4,7 +4,8 @@
     #   config.lib.file.mkOutOfStoreSymlink
     #     "${config.home.homeDirectory}/NixOS-Config/Home/Tahnkred/Fonctionnels/Environnements/Niri/config.kdl";
   
-    # programs.alacritty.enable = true; # Super+T in the default setting (terminal)
+    programs.alacritty.enable = true;
+    programs.kitty.enable = true;# Super+T in the default setting (terminal)
     # programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
     # programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
     # services.swayidle.enable = true; # idle management daemon
