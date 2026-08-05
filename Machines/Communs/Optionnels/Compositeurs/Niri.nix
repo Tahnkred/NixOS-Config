@@ -19,8 +19,21 @@
 
 ####################################################################
 
-programs.niri.enable = true;
+programs.niri = {
+    enable = true;
+    settings = {
+        prefer-no-csd = true;
+        input.keyboard.xkb = with osConfig.services.xserver.xkb; {
+            inherit layout variant options;
+            };
 
+        window-rules = [
+        {
+            matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
+            open-floating = true;
+        }
+        ];};
+    };
 # services.greetd = {
 #  enable = true;
 #  settings = {

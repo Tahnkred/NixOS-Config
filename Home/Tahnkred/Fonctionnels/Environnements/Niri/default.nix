@@ -24,18 +24,18 @@
         libsecret    
     ];
 
-    programs.niri.settings = {
-        prefer-no-csd = true;
-        input.keyboard.xkb = with osConfig.services.xserver.xkb; {
-            inherit layout variant options;
-            };
+    # programs.niri.settings = {
+    #     prefer-no-csd = true;
+    #     input.keyboard.xkb = with osConfig.services.xserver.xkb; {
+    #         inherit layout variant options;
+    #         };
 
-        window-rules = [
-        {
-            matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
-            open-floating = true;
-        }
-        ];};
+    #     window-rules = [
+    #     {
+    #         matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
+    #         open-floating = true;
+    #     }
+    #     ];};
 
         # spawn-at-startup = [
         # { command = [ "noctalia" ]; }
