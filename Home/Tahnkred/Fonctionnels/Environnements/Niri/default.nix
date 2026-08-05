@@ -1,5 +1,8 @@
 { pkgs, config, inputs, ... }:
 {
+    imports = [
+        inputs.niri.homeModules.niri
+    ];
     # xdg.configFile."niri/config.kdl".source =
     #   config.lib.file.mkOutOfStoreSymlink
     #     "${config.home.homeDirectory}/NixOS-Config/Home/Tahnkred/Fonctionnels/Environnements/Niri/config.kdl";
@@ -30,9 +33,9 @@
         package = pkgs.niri-unstable;
         settings = {
             prefer-no-csd = true;
-            input.keyboard.xkb = with osConfig.services.xserver.xkb; {
-                inherit layout variant options;
-            };
+            # input.keyboard.xkb = with osConfig.services.xserver.xkb; {
+            #     inherit layout variant options;
+            # };
             window-rules = [
             {
             matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
