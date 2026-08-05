@@ -41,6 +41,12 @@
   };
   boot.kernelParams = [ "hid_apple.fnmode=2" ];
 
+  hardware.graphics.enable = true;
+  
+  powerManagement.powertop.enable = true;
+  
+  programs.dconf.enable = true;
+
 system.stateVersion = "26.05";
 
 }
