@@ -1,27 +1,44 @@
-{ pkgs, config, ... }:
+{ pkgs, config, osConfig, ... }:
 {
-    xdg.configFile."niri/config.kdl".source =
-      config.lib.file.mkOutOfStoreSymlink
-        "${config.home.homeDirectory}/NixOS-Config/Home/Tahnkred/Fonctionnels/Environnements/Niri/config.kdl";
+    # xdg.configFile."niri/config.kdl".source =
+    #   config.lib.file.mkOutOfStoreSymlink
+    #     "${config.home.homeDirectory}/NixOS-Config/Home/Tahnkred/Fonctionnels/Environnements/Niri/config.kdl";
   
-    programs.alacritty.enable = true; # Super+T in the default setting (terminal)
-    programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
-    programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
-    services.swayidle.enable = true; # idle management daemon
+    # programs.alacritty.enable = true; # Super+T in the default setting (terminal)
+    # programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
+    # programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
+    # services.swayidle.enable = true; # idle management daemon
     services.polkit-gnome.enable = true; # polkit
     services.gnome-keyring.enable = true; 
 
     home.packages = with pkgs; [
-        fuzzel
-        swaylock
-        swayidle
-        wl-clipboard
-        pcmanfm
-        polkit_gnome
-        xwayland-satellite # xwayland support
-        gcr # requis par org.gnome.keyring.SystemPrompter, requis par gnome-keyring
-        libsecret # Provides secret-tool, utile pour debug le secret service    
+        # fuzzel
+        # swaylock
+        # swayidle
+        # wl-clipboard
+        # pcmanfm
+        # polkit_gnome
+        xwayland-satellite 
+        gcr 
+        libsecret    
     ];
+
+    programs.niri.settings = {
+        prefer-no-csd = true;
+        input.keyboard.xkb = with nixosConfig.services.xserver.xkb; {
+            inherit layout variant options;
+            };
+
+        window-rules = [
+        {
+            matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
+            open-floating = true;
+        }
+        ];};
+
+        # spawn-at-startup = [
+        # { command = [ "noctalia" ]; }
+        # ];
 
     home.sessionVariables = {
         NIXOS_OZONE_WL = "1";
