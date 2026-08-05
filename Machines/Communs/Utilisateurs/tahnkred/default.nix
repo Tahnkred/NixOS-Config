@@ -12,4 +12,6 @@ in
     packages = [pkgs.home-manager];
   };
 home-manager.users.tahnkred = import ../../../../Home/Tahnkred/Home-Machines/${config.networking.hostName}.nix;
+
+home-manager.backupFileExtension = "backup";
 }
