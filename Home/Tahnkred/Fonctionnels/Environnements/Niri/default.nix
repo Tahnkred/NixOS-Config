@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, inputs, ... }:
 {
     # xdg.configFile."niri/config.kdl".source =
     #   config.lib.file.mkOutOfStoreSymlink
@@ -9,37 +9,37 @@
     # programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
     # programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
     # services.swayidle.enable = true; # idle management daemon
-    services.polkit-gnome.enable = true; # polkit
-    services.gnome-keyring.enable = true; 
+    # services.polkit-gnome.enable = true; # polkit
+    # services.gnome-keyring.enable = true; 
 
     home.packages = with pkgs; [
         # fuzzel
         # swaylock
         # swayidle
-        # wl-clipboard
+        wl-clipboard
         # pcmanfm
         # polkit_gnome
-        xwayland-satellite 
-        gcr 
-        libsecret    
+        xwayland-satellite-unstable 
+        # gcr 
+        # libsecret    
+        # wayland-utils
     ];
 
-    # programs.niri.settings = {
-    #     prefer-no-csd = true;
-    #     input.keyboard.xkb = with osConfig.services.xserver.xkb; {
-    #         inherit layout variant options;
-    #         };
-
-    #     window-rules = [
-    #     {
-    #         matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
-    #         open-floating = true;
-    #     }
-    #     ];};
-
-        # spawn-at-startup = [
-        # { command = [ "noctalia" ]; }
-        # ];
+    nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+    programs.niri = {
+        package = pkgs.niri-unstable;
+        settings = {
+            prefer-no-csd = true;
+            input.keyboard.xkb = with osConfig.services.xserver.xkb; {
+                inherit layout variant options;
+            };
+            window-rules = [
+            {
+            matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
+            open-floating = true;
+            }
+            ];};
+    };
 
     home.sessionVariables = {
         NIXOS_OZONE_WL = "1";

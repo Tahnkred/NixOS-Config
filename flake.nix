@@ -37,17 +37,11 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
-
-  #  niri = {
-  #    url = "github:sodiboo/niri-flake";
-  #    inputs.nixpkgs.follows = "nixpkgs";
-  #    inputs.home-manager.follows = "home-manager";
-  #  };
+   niri = {
+     url = "github:sodiboo/niri-flake";
+     inputs.nixpkgs.follows = "nixpkgs";
+     inputs.home-manager.follows = "home-manager";
+   };
 
    noctalia = {
      url = "github:noctalia-dev/noctalia/cachix";
@@ -60,7 +54,7 @@
 
   };
   # Merci Misterio77 pour avoir publié ta configuration Nix psk ça douille par ici...
-  outputs = { self, nixpkgs, systems, nixos-hardware, home-manager, plasma-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, systems, nixos-hardware, home-manager, ... } @ inputs:
     let
       inherit (self) outputs;
       lib = let
