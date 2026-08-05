@@ -22,7 +22,7 @@
         wl-clipboard
         # pcmanfm
         # polkit_gnome
-        xwayland-satellite-unstable 
+        # xwayland-satellite-unstable
         # gcr 
         # libsecret    
         # wayland-utils
