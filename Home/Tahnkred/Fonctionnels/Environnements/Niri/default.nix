@@ -28,8 +28,7 @@
         # wayland-utils
     ];
 
-
-        programs.niri.settings = {
+    programs.niri.settings = {
             prefer-no-csd = true;
             # input.keyboard.xkb = with osConfig.services.xserver.xkb; {
             #     inherit layout variant options;

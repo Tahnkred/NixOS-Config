@@ -1,7 +1,6 @@
-{ config, inputs, overlays,... }:
+{ config, osConfig,... }:
 
 {
-    imports = [ inputs.niri.nixosModules.niri ];
 #   programs.niri.enable = true;
 
 #   services.greetd = {
@@ -19,7 +18,8 @@
 #   systemd.user.services.niri.enableDefaultPath = false;
 
 ####################################################################
-
+    nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+    
     programs.niri = {
         enable = true;
         package = pkgs.niri-unstable;
