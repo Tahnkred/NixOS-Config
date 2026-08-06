@@ -1,6 +1,7 @@
-{ config, osConfig,... }:
+{ config, inputs, overlays,... }:
 
 {
+    imports = [ inputs.niri.nixosModules.niri ];
 #   programs.niri.enable = true;
 
 #   services.greetd = {
@@ -21,6 +22,7 @@
 
     programs.niri = {
         enable = true;
+        package = pkgs.niri-unstable;
     };
 # services.greetd = {
 #  enable = true;

@@ -28,9 +28,8 @@
         # wayland-utils
     ];
 
-    programs.niri = {
-        package = pkgs.niri-unstable;
-        settings = {
+
+        programs.niri.settings = {
             prefer-no-csd = true;
             # input.keyboard.xkb = with osConfig.services.xserver.xkb; {
             #     inherit layout variant options;
@@ -41,7 +40,6 @@
             open-floating = true;
             }
             ];};
-    };
 
     home.sessionVariables = {
         NIXOS_OZONE_WL = "1";
