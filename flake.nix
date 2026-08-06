@@ -91,6 +91,12 @@
           inherit inputs outputs;
         };
       };
+      vm = lib.nixosSystem {
+        modules = [./Machines/VM];
+        specialArgs = {
+          inherit inputs outputs;
+        };
+      };
     };
 
     homeConfigurations = {};
