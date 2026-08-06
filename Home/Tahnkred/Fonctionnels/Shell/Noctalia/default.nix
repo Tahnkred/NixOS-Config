@@ -1,8 +1,8 @@
 { pkgs, config, inputs, ... }:
 {
-    imports = [
-      inputs.noctalia.homeModules.default
-    ];
+    # imports = [
+    #   inputs.noctalia.homeModules.default
+    # ];
 
     programs.noctalia.settings = {
         theme = "Noctalia";

@@ -1,8 +1,8 @@
 { pkgs, config, inputs, ... }:
 {
-    imports = [
-        inputs.niri.homeModules.niri
-    ];
+    # imports = [
+    #     inputs.niri.homeModules.niri
+    # ];
     # xdg.configFile."niri/config.kdl".source =
     #   config.lib.file.mkOutOfStoreSymlink
     #     "${config.home.homeDirectory}/NixOS-Config/Home/Tahnkred/Fonctionnels/Environnements/Niri/config.kdl";
