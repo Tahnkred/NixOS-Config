@@ -20,7 +20,7 @@
         # swaylock
         # swayidle
         wl-clipboard
-        # pcmanfm
+        pcmanfm
         # polkit_gnome
         # xwayland-satellite-unstable
         # gcr 
@@ -30,9 +30,29 @@
 
     programs.niri.settings = {
             prefer-no-csd = true;
-            # input.keyboard.xkb = with osConfig.services.xserver.xkb; {
-            #     inherit layout variant options;
-            # };
+
+            input.keyboard.xkb.layout = "no";
+            input.mouse.accel-speed = 1.0;
+
+            input.touchpad = {
+                tap = true;
+                dwt = true;
+                natural-scroll = true;
+                click-method = "clickfinger";
+                };
+
+            input.mouse.accel-speed = 1.0;
+            
+            input.touchpad = {
+                tap = true;
+                dwt = true;
+                natural-scroll = true;
+                click-method = "clickfinger";
+            };
+
+            spawn-at-startup = [
+                { argv = ["noctalia"]; }
+            ];
             window-rules = [
             {
             matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
@@ -42,6 +62,6 @@
 
     home.sessionVariables = {
         NIXOS_OZONE_WL = "1";
-        XDG_CURRENT_DESKTOP = "niri";
+    #   XDG_CURRENT_DESKTOP = "niri";
     };
 }

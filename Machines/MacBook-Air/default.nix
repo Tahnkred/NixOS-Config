@@ -28,9 +28,12 @@
   #  useDHCP = true;
   };
 
-  # Driver Broadcom pour le WiFi (pas supporté à ce jour)
+  # Driver Open-Source-retro-engineered pour le WiFi (pas supporté à ce jour)
   # boot.kernelModules = [ "b43" ];
   # networking.enableB43Firmware = true;
+
+# Driver open-source sans binaire propriétaire (peut potentiellement fonctionner)
+  boot.kernelModules = [ "brcmfmac" ];
 
   # Configure keymap in X11 (je ne sais pas pourquoi mais c'est la seule façon de faire fonctionner le clavier correctement)
   services.xserver.xkb = {
