@@ -31,7 +31,7 @@
         #     spawn-at-startup = [
         #         { argv = ["noctalia"]; }
         #     ];
-        };
+        # };
         
     };
 
