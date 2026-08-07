@@ -44,7 +44,7 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-   niri-flake = {
+   niri = {
      url = "github:sodiboo/niri-flake";
      inputs.nixpkgs.follows = "nixpkgs";
    };
