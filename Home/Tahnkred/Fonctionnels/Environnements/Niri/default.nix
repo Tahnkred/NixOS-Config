@@ -1,8 +1,8 @@
 { pkgs, config, inputs, ... }:
 {
-    imports = [
-        inputs.niri.homeModules.niri
-    ];
+    # imports = [
+    #     inputs.niri.homeModules.niri
+    # ];
     # xdg.configFile."niri/config.kdl".source =
     #   config.lib.file.mkOutOfStoreSymlink
     #     "${config.home.homeDirectory}/NixOS-Config/Home/Tahnkred/Fonctionnels/Environnements/Niri/config.kdl";
@@ -31,10 +31,10 @@
     programs.niri.settings = {
             prefer-no-csd = true;
 
-            keyboard.xkb.layout = "no";
-            mouse.accel-speed = 1.0;
+            input.keyboard.xkb.layout = "no";
+            input.mouse.accel-speed = 1.0;
 
-            touchpad = {
+            input.touchpad = {
                 tap = true;
                 dwt = true;
                 natural-scroll = true;
