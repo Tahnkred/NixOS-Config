@@ -31,24 +31,16 @@
     programs.niri.settings = {
             prefer-no-csd = true;
 
-            input.keyboard.xkb.layout = "no";
-            input.mouse.accel-speed = 1.0;
+            keyboard.xkb.layout = "no";
+            mouse.accel-speed = 1.0;
 
-            input.touchpad = {
+            touchpad = {
                 tap = true;
                 dwt = true;
                 natural-scroll = true;
                 click-method = "clickfinger";
                 };
 
-            input.mouse.accel-speed = 1.0;
-            
-            input.touchpad = {
-                tap = true;
-                dwt = true;
-                natural-scroll = true;
-                click-method = "clickfinger";
-            };
 
             spawn-at-startup = [
                 { argv = ["noctalia"]; }
