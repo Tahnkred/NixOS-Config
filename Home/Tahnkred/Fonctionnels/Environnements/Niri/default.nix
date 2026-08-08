@@ -28,29 +28,29 @@
         # wayland-utils
     ];
 
-    programs.niri.settings = {
-            prefer-no-csd = true;
+    # programs.niri.settings = {
+    #         prefer-no-csd = true;
 
-            keyboard.xkb.layout = "no";
-            mouse.accel-speed = 1.0;
+    #         # keyboard.xkb.layout = "no";
+    #         mouse.accel-speed = 1.0;
 
-            touchpad = {
-                tap = true;
-                dwt = true;
-                natural-scroll = true;
-                click-method = "clickfinger";
-                };
+    #         touchpad = {
+    #             tap = true;
+    #             dwt = true;
+    #             natural-scroll = true;
+    #             click-method = "clickfinger";
+    #             };
 
 
-            spawn-at-startup = [
-                { argv = ["noctalia"]; }
-            ];
-            window-rules = [
-            {
-            matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
-            open-floating = true;
-            }
-            ];};
+    #         spawn-at-startup = [
+    #             { argv = ["noctalia"]; }
+    #         ];
+    #         window-rules = [
+    #         {
+    #         matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
+    #         open-floating = true;
+    #         }
+    #         ];};
 
     home.sessionVariables = {
         NIXOS_OZONE_WL = "1";
