@@ -1,8 +1,8 @@
 { pkgs, config, inputs, ... }:
 {
-    # imports = [
-    #     inputs.niri.homeModules.niri
-    # ];
+    imports = [
+        inputs.niri.homeModules.niri
+    ];
     # xdg.configFile."niri/config.kdl".source =
     #   config.lib.file.mkOutOfStoreSymlink
     #     "${config.home.homeDirectory}/NixOS-Config/Home/Tahnkred/Fonctionnels/Environnements/Niri/config.kdl";
@@ -28,29 +28,29 @@
         # wayland-utils
     ];
 
-    # programs.niri.settings = {
-    #         prefer-no-csd = true;
+    programs.niri.settings = {
+            prefer-no-csd = true;
 
-    #         # keyboard.xkb.layout = "no";
-    #         mouse.accel-speed = 1.0;
+            keyboard.xkb.layout = "no";
+            mouse.accel-speed = 1.0;
 
-    #         touchpad = {
-    #             tap = true;
-    #             dwt = true;
-    #             natural-scroll = true;
-    #             click-method = "clickfinger";
-    #             };
+            touchpad = {
+                tap = true;
+                dwt = true;
+                natural-scroll = true;
+                click-method = "clickfinger";
+                };
 
 
-    #         spawn-at-startup = [
-    #             { argv = ["noctalia"]; }
-    #         ];
-    #         window-rules = [
-    #         {
-    #         matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
-    #         open-floating = true;
-    #         }
-    #         ];};
+            spawn-at-startup = [
+                { argv = ["noctalia"]; }
+            ];
+            window-rules = [
+            {
+            matches = [{ app-id = "^(authentication-agent-1|pwvucontrol)$"; }];
+            open-floating = true;
+            }
+            ];};
 
     home.sessionVariables = {
         NIXOS_OZONE_WL = "1";
