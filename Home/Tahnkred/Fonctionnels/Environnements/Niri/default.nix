@@ -31,7 +31,7 @@
     programs.niri.settings = {
             prefer-no-csd = true;
 
-            input.keyboard.xkb.layout = "no";
+            input.keyboard.xkb.layout = "fr";
             input.mouse.accel-speed = 1.0;
 
             input.touchpad = {
