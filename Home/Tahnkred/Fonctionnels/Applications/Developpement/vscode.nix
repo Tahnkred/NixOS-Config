@@ -7,6 +7,6 @@
     # };
   };
   xdg.configFile."Code/User/argv.json".text = builtins.toJSON {
-  password-store = "gnome-libsecret";
+  password-store = "gnome-keyring";
   };
 }
