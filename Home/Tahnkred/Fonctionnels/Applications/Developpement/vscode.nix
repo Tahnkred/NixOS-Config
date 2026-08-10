@@ -3,7 +3,7 @@
   programs.vscode = {
     enable = true;
     argvSettings = {
-      "password-store" = "gnome-keyring";
+      "password-store" = "gnome-libsecret";
     };
   };
   # xdg.configFile."Code/User/argv.json".text = builtins.toJSON {

@@ -2,8 +2,8 @@
 {
   programs.niri.settings.binds = {
     # ---- Applications ----
-    "Mod+Return".action.spawn = [ "kitty" ];
-    "Mod+D".action.spawn = [ "noctalia-shell" "ipc" "call" "launcher" "toggle" ];
+    "Mod+T".action.spawn = [ "kitty" ];
+    "Mod+D".action.spawn = [ "noctalia-shell" ];#"ipc" "call" "launcher" "toggle" ];
     "Mod+E".action.spawn = [ "nemo" ];
 
     # ---- Fermer une fenêtre ----

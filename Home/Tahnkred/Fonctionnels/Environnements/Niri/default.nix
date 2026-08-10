@@ -25,7 +25,7 @@
         # polkit_gnome
         # xwayland-satellite-unstable
         # gcr 
-        # libsecret    
+        libsecret    
         # wayland-utils
     ];
 
