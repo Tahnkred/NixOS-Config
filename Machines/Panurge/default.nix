@@ -46,6 +46,7 @@
   # '';
 
   boot.kernelParams = [ "hid_apple.fnmode=1" ];
+  boot.kernelModules = [ "applesmc" ];
 
   hardware.graphics.enable = true;
   
