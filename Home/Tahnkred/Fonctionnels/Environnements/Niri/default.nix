@@ -28,6 +28,7 @@
         libsecret
         brightnessctl
         ddcutil
+        playerctl
         wev
         # wayland-utils
     ];

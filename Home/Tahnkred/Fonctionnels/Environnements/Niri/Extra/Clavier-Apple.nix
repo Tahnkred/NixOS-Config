@@ -63,6 +63,11 @@
     "XF86KbdBrightnessDown".action.spawn = [ "brightnessctl" "--device=smc::kbd_backlight" "set" "5%-" ];
     "XF86KbdBrightnessUp".action.spawn = [ "brightnessctl" "--device=smc::kbd_backlight" "set" "+5%" ];
 
+    # ---- Player (F7/F8/F9 sur clavier MacBook) ----
+    "XF86AudioPrev".action.spawn = [ "playerctl" "previous" ];
+    "XF86AudioPlay".action.spawn = [ "playerctl" "play-pause" ];
+    "XF86AudioNext".action.spawn = [ "playerctl" "next" ];
+
     # ---- Son (F10/F11/F12 sur clavier MacBook) ----
     "XF86AudioMute".action.spawn = [ "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle" ];
     "XF86AudioLowerVolume".action.spawn = [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-" ];
