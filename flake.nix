@@ -52,6 +52,11 @@
    noctalia = {
      url = "github:noctalia-dev/noctalia/cachix";
    };
+   
+   sydra = {
+     url = "github:wimpysworld/sidra";
+     inputs.home-manager.follows = "home-manager";
+   };
       
  #   sops-nix = {
  #     url = "github:Mic92/sops-nix";

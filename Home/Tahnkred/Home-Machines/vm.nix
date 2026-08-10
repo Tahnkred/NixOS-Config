@@ -4,7 +4,8 @@
 
     ../Fonctionnels/Applications/Bureautique
     ../Fonctionnels/Applications/Developpement
-    ../Fonctionnels/Applications/Messageries/Vesktop.nix
+    ../Fonctionnels/Applications/Divertissement/Vesktop.nix
+    ../Fonctionnels/Applications/Divertissement/Sidra.nix
 
     ../Fonctionnels/Environnements/Niri
     ../Fonctionnels/Shell/Noctalia
