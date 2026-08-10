@@ -21,11 +21,12 @@
         # swayidle
         wl-clipboard
         # pcmanfm
-        nemo
+        nautilus
         # polkit_gnome
         # xwayland-satellite-unstable
         gcr 
-        libsecret    
+        libsecret
+        brightnessctl
         # wayland-utils
     ];
 
