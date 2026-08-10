@@ -3,7 +3,7 @@
 {
     imports = [
         ./Zen
-        ./Zip
-        ./Unzip
+        ./Zip.nix
+        ./Unzip.nix
     ];
 }
