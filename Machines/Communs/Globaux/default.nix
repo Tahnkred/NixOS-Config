@@ -10,6 +10,7 @@
     ./NetworkManager.nix
     ./Nix.nix
     ./Pipewire.nix
+    ./Automatic-timezone.nix
   ]
   ++ (builtins.attrValues outputs.nixosModules);
 
