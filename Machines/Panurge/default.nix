@@ -45,8 +45,10 @@
   #   options hid_apple fnmode=1
   # '';
 
-  boot.kernelParams = [ "hid_apple.fnmode=1" ];
-  boot.kernelModules = [ "applesmc" ];
+  boot = {
+    kernelParams = [ "hid_apple.fnmode=1" ];
+    kernelModules = [ "applesmc" ];
+  };
 
   hardware.graphics.enable = true;
   
