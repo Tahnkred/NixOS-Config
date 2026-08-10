@@ -21,6 +21,7 @@
         # swayidle
         wl-clipboard
         pcmanfm
+        nemo
         # polkit_gnome
         # xwayland-satellite-unstable
         # gcr 
@@ -31,7 +32,7 @@
     programs.niri.settings = {
             prefer-no-csd = true;
 
-            input.keyboard.xkb.layout = "fr";
+        #    input.keyboard.xkb.layout = "fr";
             input.mouse.accel-speed = 1.0;
 
             input.touchpad = {

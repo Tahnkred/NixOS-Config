@@ -7,6 +7,7 @@
     ../Fonctionnels/Applications/Messageries/Vesktop.nix
 
     ../Fonctionnels/Environnements/Niri
+    ..Fonctionnels/Environnements/Niri/Extra/Clavier-Apple
     ../Fonctionnels/Shell/Noctalia
   ];
 

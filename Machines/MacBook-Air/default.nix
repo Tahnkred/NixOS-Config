@@ -40,7 +40,12 @@
   layout = "fr";
   variant = "mac";
   };
-  boot.kernelParams = [ "hid_apple.fnmode=2" ];
+  
+  # boot.extraModprobeConfig = ''
+  #   options hid_apple fnmode=1
+  # '';
+
+  boot.kernelParams = [ "hid_apple.fnmode=1" ];
 
   hardware.graphics.enable = true;
   
