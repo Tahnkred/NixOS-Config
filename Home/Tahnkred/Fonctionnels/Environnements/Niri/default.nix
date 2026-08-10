@@ -29,7 +29,6 @@
         brightnessctl
         ddcutil
         wev
-        lsusb
         # wayland-utils
     ];
 
