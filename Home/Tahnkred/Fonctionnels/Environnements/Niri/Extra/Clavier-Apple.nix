@@ -3,7 +3,7 @@
   programs.niri.settings.binds = {
     # ---- Applications ----
     "Mod+T".action.spawn = [ "kitty" ];
-    "Mod+D".action.spawn = [ "noctalia-shell" ];#"ipc" "call" "launcher" "toggle" ];
+    "Mod+D".action.spawn = [ "noctalia" "msg" "panel-toggle" "launcher" ];
     "Mod+E".action.spawn = [ "nautilus" ];
 
     # ---- Fermer une fenêtre ----
@@ -68,11 +68,11 @@
     "XF86AudioLowerVolume".action.spawn = [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-" ];
     "XF86AudioRaiseVolume".action.spawn = [ "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "5%+" ];
 
-    # ---- F3 : afficher toutes les fenêtres (Mission Control) — NOM DE TOUCHE À VÉRIFIER, voir wev ----
-    # "XF86???".action.toggle-overview = {};
+    # ---- F3 : afficher toutes les fenêtres (Mission Control)
+    "XF86LaunchA".action.toggle-overview = {};
 
-    # ---- F4 : lanceur d'app (Launchpad) — NOM DE TOUCHE À VÉRIFIER, voir wev ----
-    # "XF86???".action.spawn = [ "noctalia-shell" "ipc" "call" "launcher" "toggle" ];
+    # ---- F4 : lanceur d'app (Launchpad)
+    "XF86LaunchB".action.spawn = [ "noctalia" "msg" "panel-toggle" "launcher" ];
 
     # ---- Verrouillage / sortie ----
     "Mod+Shift+E".action.quit = {};
