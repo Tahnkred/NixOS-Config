@@ -53,7 +53,7 @@
      url = "github:noctalia-dev/noctalia/cachix";
    };
    
-   sydra = {
+   sidra = {
      url = "github:wimpysworld/sidra";
      inputs.home-manager.follows = "home-manager";
    };
