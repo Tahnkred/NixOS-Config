@@ -12,8 +12,8 @@
     # programs.fuzzel.enable = true; # Super+D in the default setting (app launcher)
     # programs.swaylock.enable = true; # Super+Alt+L in the default setting (screen locker)
     # services.swayidle.enable = true; # idle management daemon
-    # services.polkit-gnome.enable = true; # polkit
-    # services.gnome-keyring.enable = true; 
+    services.polkit-gnome.enable = true; # polkit
+    services.gnome-keyring.enable = true; 
 
     home.packages = with pkgs; [
         # fuzzel
@@ -24,7 +24,7 @@
         nemo
         # polkit_gnome
         # xwayland-satellite-unstable
-        # gcr 
+        gcr 
         libsecret    
         # wayland-utils
     ];
