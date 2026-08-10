@@ -20,7 +20,7 @@
         # swaylock
         # swayidle
         wl-clipboard
-        pcmanfm
+        # pcmanfm
         nemo
         # polkit_gnome
         # xwayland-satellite-unstable
