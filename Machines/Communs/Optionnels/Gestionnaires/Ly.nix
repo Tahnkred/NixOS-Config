@@ -11,7 +11,7 @@
         };
     };
 
-    # security.pam.services.ly.enableGnomeKeyring = true;
+    security.pam.services.ly.enableGnomeKeyring = true;
   
 
 }
