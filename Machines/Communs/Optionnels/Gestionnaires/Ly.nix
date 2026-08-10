@@ -10,8 +10,6 @@
             bigclock = "en";        # affiche une horloge XL
         };
     };
-
-    security.pam.services.ly.enableGnomeKeyring = true;
   
 
 }
