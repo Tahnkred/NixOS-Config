@@ -4,14 +4,14 @@
     # ---- Applications ----
     "Mod+T".action.spawn = [ "kitty" ];
     "Mod+D".action.spawn = [ "noctalia-shell" ];#"ipc" "call" "launcher" "toggle" ];
-    "Mod+E".action.spawn = [ "nemo" ];
+    "Mod+E".action.spawn = [ "nautilus" ];
 
     # ---- Fermer une fenêtre ----
     "Mod+Q".action.close-window = {};
 
     # ---- Screenshots ----
-    "Print".action.screenshot = {};
-    "Mod+Print".action.screenshot-screen = {};
+    "Mod+P".action.screenshot = {};
+    "Mod+Super+P".action.screenshot-screen = {};
     "Mod+Shift+Print".action.screenshot-window = {};
 
     # ---- Navigation entre fenêtres/colonnes (flèches + vim-style hjkl) ----
