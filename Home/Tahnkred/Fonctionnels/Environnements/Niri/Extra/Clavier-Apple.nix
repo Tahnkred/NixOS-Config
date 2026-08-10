@@ -60,8 +60,8 @@
     "XF86MonBrightnessUp".action.spawn = [ "brightnessctl" "set" "+5%" ];
 
     # ---- Rétroéclairage clavier (F5/F6 sur clavier MacBook) ----
-    "XF86KbdBrightnessDown".action.spawn = [ "brightnessctl" "--device=kbd_backlight" "set" "5%-" ];
-    "XF86KbdBrightnessUp".action.spawn = [ "brightnessctl" "--device=kbd_backlight" "set" "+5%" ];
+    "XF86KbdBrightnessDown".action.spawn = [ "brightnessctl" "--device=smc::kbd_backlight" "set" "5%-" ];
+    "XF86KbdBrightnessUp".action.spawn = [ "brightnessctl" "--device=smc::kbd_backlight" "set" "+5%" ];
 
     # ---- Son (F10/F11/F12 sur clavier MacBook) ----
     "XF86AudioMute".action.spawn = [ "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle" ];
