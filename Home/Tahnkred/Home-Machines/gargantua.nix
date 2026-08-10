@@ -17,10 +17,11 @@
  monitors = [
    {
      name = "DP-1";
-     width = 1440;
-     height = 900;
+     width = 1920;
+     height = 1080;
      workspace = "1";
      primary = true;
+     refreshRate = 144;
    }
  ];
 }

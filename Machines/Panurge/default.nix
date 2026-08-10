@@ -24,7 +24,7 @@
   ];
 
   networking = {
-    hostName = "macbook";
+    hostName = "panurge";
   #  useDHCP = true;
   };
 

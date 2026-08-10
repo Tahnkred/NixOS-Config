@@ -90,13 +90,22 @@
     #  formatter = forEachSystem (pkgs: pkgs.alejandra);
 
     nixosConfigurations = {
-      # Laptup inutile mais utile pour le test puisque les VM tournent MAL sur ma machine
-      macbook = lib.nixosSystem {
-        modules = [./Machines/MacBook-Air];
+
+      gargantua = lib.nixosSystem {
+        modules = [./Machines/Gargantua];
         specialArgs = {
           inherit inputs outputs;
         };
       };
+      
+      # Laptup inutile mais utile pour le test puisque les VM tournent MAL sur ma machine
+      panurge = lib.nixosSystem {
+        modules = [./Machines/Panurge];
+        specialArgs = {
+          inherit inputs outputs;
+        };
+      };
+
       vm = lib.nixosSystem {
         modules = [./Machines/VM];
         specialArgs = {
