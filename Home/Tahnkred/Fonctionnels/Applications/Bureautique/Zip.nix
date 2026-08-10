@@ -1,6 +1,6 @@
 {config, pkgs, ...}:
 {
-environment.systemPackages = with pkgs; [
-  zip
-];
+    home.packages = with pkgs; [
+        zip
+    ];
 }

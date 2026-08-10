@@ -1,6 +1,6 @@
 {config, pkgs, ...}:
 {
-environment.systemPackages = with pkgs; [
-  unzip
+    home.packages = with pkgs; [
+        unzip
 ];
 }
