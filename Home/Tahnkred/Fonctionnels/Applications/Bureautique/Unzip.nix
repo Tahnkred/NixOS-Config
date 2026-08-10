@@ -1,6 +1,6 @@
 {config, pkgs, ...}:
 {
-    programs.unzip = {
-        enable = true;
-        };
+environment.systemPackages = with pkgs; [
+  unzip
+];
 }

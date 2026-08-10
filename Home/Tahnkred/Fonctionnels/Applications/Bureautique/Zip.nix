@@ -1,6 +1,6 @@
 {config, pkgs, ...}:
 {
-    programs.zip = {
-        enable = true;
-        };
+environment.systemPackages = with pkgs; [
+  zip
+];
 }
