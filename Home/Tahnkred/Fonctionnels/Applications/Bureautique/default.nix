@@ -3,5 +3,7 @@
 {
     imports = [
         ./Zen
+        ./Zip
+        ./Unzip
     ];
 }
