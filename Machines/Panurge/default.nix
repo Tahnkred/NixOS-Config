@@ -33,8 +33,10 @@
   # networking.enableB43Firmware = true;
 
 # Driver open-source sans binaire propriétaire (peut potentiellement fonctionner)
-  boot.kernelModules = [ "brcmfmac" ];
-
+  boot = {
+    kernelModules = [ "brcmfmac" "applesmc" ];
+    kernelParams = [ "hid_apple.fnmode=1" ];
+  };
   # Configure keymap in X11 (je ne sais pas pourquoi mais c'est la seule façon de faire fonctionner le clavier correctement)
   services.xserver.xkb = {
   layout = "fr";
@@ -45,10 +47,6 @@
   #   options hid_apple fnmode=1
   # '';
 
-  boot = {
-    kernelParams = [ "hid_apple.fnmode=1" ];
-    kernelModules = [ "applesmc" ];
-  };
 
   hardware.graphics.enable = true;
   
