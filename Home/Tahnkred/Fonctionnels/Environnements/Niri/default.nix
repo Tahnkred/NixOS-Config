@@ -27,6 +27,8 @@
         gcr 
         libsecret
         brightnessctl
+        ddcutil
+        wev
         # wayland-utils
     ];
 
