@@ -25,6 +25,8 @@
     ../Communs/Optionnels/Gestionnaires/Ly.nix
     ../Communs/Optionnels/Compositeurs/Niri.nix
     ../Communs/Optionnels/Shell/Noctalia
+
+    ../Communs/Optionnels/Gaming.nix
   ];
 
   networking = {
